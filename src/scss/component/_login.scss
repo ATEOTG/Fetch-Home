@@ -1,0 +1,62 @@
+.login-cont {
+  @include marginCenter;
+}
+
+.form {
+  @include flexColumn;
+  align-items: center;
+  border-radius: 1rem;
+  gap: 2rem;
+  margin-top: 15rem;
+  padding: 4rem 2rem;
+  box-shadow: 0.3rem 2rem 3.5rem -0.5rem rgba(22, 23, 34, 0.212);
+
+  &__inputs-cont {
+    position: relative;
+    width: 100%;
+    @include flexColumn;
+    gap: 0.5rem;
+
+    &--error {
+      outline: solid red !important;
+    }
+    &__error-message {
+      position: absolute;
+      top: 20%;
+      right: 0;
+      color: red;
+      font-size: 1.4rem;
+    }
+    label {
+      font-size: 2.4rem;
+    }
+
+    input {
+      padding: 0.8rem;
+      font-size: 1.8rem;
+      color: $primary-par-color;
+
+      &:focus {
+        outline: double $primary-accent;
+      }
+    }
+  }
+
+  &__btn {
+    width: 50%;
+    font-family: "Outfit", sans-serif;
+    padding: 1rem 0rem;
+    background-color: $primary-color;
+    border: none;
+    border-radius: 1.5rem;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 90%;
+    }
+    p {
+      font-size: 2rem;
+      color: $primary-white;
+    }
+  }
+}

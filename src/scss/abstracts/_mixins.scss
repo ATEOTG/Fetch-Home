@@ -1,4 +1,9 @@
 @mixin marginCenter {
-  width: 65%;
+  width: 25%;
   margin: 0 auto;
+}
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
 }
