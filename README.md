@@ -5,7 +5,7 @@ This is an application that allows a user to search through a database of dogs a
 
 Programmed using React and TypeScript.
 
-Live Site: [Fetch App](https://dazzling-rugelach-c6e995.netlify.app/user/login)
+Live Site: [Fetch App](https://dazzling-rugelach-c6e995.netlify.app)
 
 ## How to run locally
 - Go to the project directory and run the script "npm start." You will be able to view the application on [http://localhost:3000](http://localhost:3000) in your browser.
