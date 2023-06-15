@@ -108,7 +108,6 @@ function Home() {
     );
   }, [breeds, sortOption, currentPage]);
 
-  console.log(dogMatched);
   return (
     <Fragment>
       {dogMatched ? (
