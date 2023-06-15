@@ -1,0 +1,19 @@
+.filter-cont {
+  position: fixed;
+  top: 5%;
+  background-color: $primary-white;
+}
+
+.filter-form {
+  @include flexColumn;
+  gap: 1rem;
+  padding: 2rem;
+  height: 90rem;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+
+  &__option__label {
+    display: flex;
+    gap: 1rem;
+  }
+}
