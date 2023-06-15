@@ -1,8 +1,10 @@
 import { Fragment, useEffect, useState } from "react";
-import { DogObject, DogsSearchObject } from "../model";
+import { DogObject, DogsSearchObject } from "../../model";
 import EntryComponent from "./EntryComponent";
-import ReactPaginate from "react-paginate";
 import FilterSidebar from "./FilterSidebar";
+import Pagination from "./Pagination";
+import SortComponent from "./SortComponent";
+import MatchComponent from "./MatchComponent";
 
 function breedStringify(breedsArray: string[]) {
   let breedString = "";
@@ -110,52 +112,13 @@ function Home() {
 
   return (
     <Fragment>
-      {dogMatched ? (
-        <div className="backdrop">
-          <h2>Your Match is {dogMatched.name}!</h2>
-          <div className="dog-match-modal">
-            <EntryComponent
-              id={dogMatched.id}
-              name={dogMatched.name}
-              age={dogMatched.age}
-              img={dogMatched.img}
-              breed={dogMatched.breed}
-              zip_code={dogMatched.zip_code}
-            />
-          </div>
-        </div>
-      ) : (
-        <Fragment> </Fragment>
-      )}
+      <MatchComponent dogMatched={dogMatched} />
       <div className="home-cont">
         <FilterSidebar getDogData={getDogData} setBreeds={setBreeds} />
-        <div className="sort-form-cont">
-          <form className="sort-form">
-            <label>
-              <input
-                type="radio"
-                name="sort"
-                value="asc"
-                defaultChecked
-                onClick={sortOptionHandler}
-              />{" "}
-              Ascending
-            </label>
-            <label>
-              <input
-                type="radio"
-                name="sort"
-                value="desc"
-                onClick={sortOptionHandler}
-              />{" "}
-              Descending
-            </label>
-          </form>
-          <button className="match-btn" onClick={matchClickHandler}>
-            MATCH ME!
-          </button>
-        </div>
-
+        <SortComponent
+          sortOptionHandler={sortOptionHandler}
+          matchClickHandler={matchClickHandler}
+        />
         <main>
           <ul className="result-list">
             {dogData?.map((el) => {
@@ -173,17 +136,10 @@ function Home() {
               );
             })}
           </ul>
-          <div className="pagination">
-            <div className="pagination__cont">
-              <ReactPaginate
-                pageCount={
-                  searchData?.total ? Math.ceil(searchData.total / 25) : 0
-                }
-                onPageChange={pageChangeHandler}
-                activeClassName="pagination__list--active"
-              />
-            </div>
-          </div>
+          <Pagination
+            searchData={searchData}
+            pageChangeHandler={pageChangeHandler}
+          />
         </main>
       </div>
     </Fragment>

@@ -1,4 +1,4 @@
-import { DogObject } from "../model";
+import { DogObject } from "../../model";
 
 function EntryComponent(props: DogObject) {
   return (
