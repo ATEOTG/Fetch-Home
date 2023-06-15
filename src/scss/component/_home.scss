@@ -8,13 +8,33 @@ main {
   background-color: $primary-color;
 }
 
-.sort-form {
+.sort-form-cont {
   @include marginCenter;
   display: flex;
-  gap: 2rem;
-  padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
   border-radius: 0.5rem;
   background-color: $primary-white;
+  padding: 2rem;
+
+  .match-btn {
+    font-family: "Outfit", sans-serif;
+    padding: 2rem;
+    color: $primary-white;
+    font-weight: bold;
+    background-color: $primary-accent;
+    border: none;
+    border-radius: 1.5rem;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 90%;
+    }
+  }
+}
+.sort-form {
+  display: flex;
+  gap: 2rem;
 
   label {
     font-size: 1.4rem;
@@ -36,5 +56,37 @@ main {
   li {
     display: flex;
     justify-content: center;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  z-index: 999;
+  background-color: $primary-accent;
+  width: 100%;
+  height: 100%;
+
+  h2 {
+    font-size: 4.8rem;
+    text-align: center;
+    color: $primary-white;
+  }
+
+  .dog-match-modal {
+    position: relative;
+    width: 100%;
+
+    .entry-cont {
+      position: absolute;
+      width: 42rem;
+      top: 0;
+      right: 40%;
+      border-radius: 0.6rem;
+      transform: translateY(20%);
+
+      .entry-img {
+        border-radius: 0.5rem;
+      }
+    }
   }
 }
