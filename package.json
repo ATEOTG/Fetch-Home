@@ -12,6 +12,7 @@
     "@types/react-dom": "^18.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-paginate": "^8.2.0",
     "react-router": "^6.12.1",
     "react-router-dom": "^6.12.1",
     "react-scripts": "5.0.1",
