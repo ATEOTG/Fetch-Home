@@ -1,0 +1,40 @@
+.home-cont {
+  padding-top: 10rem;
+  height: inherit;
+  background-color: $primary-color;
+}
+
+main {
+  background-color: $primary-color;
+}
+
+.sort-form {
+  @include marginCenter;
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: $primary-white;
+
+  label {
+    font-size: 1.4rem;
+    color: $primary-par-color;
+    cursor: pointer;
+  }
+}
+
+.result-list {
+  @include marginCenter;
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 4rem;
+  row-gap: 4rem;
+  background-color: $primary-color;
+  list-style: none;
+
+  li {
+    display: flex;
+    justify-content: center;
+  }
+}

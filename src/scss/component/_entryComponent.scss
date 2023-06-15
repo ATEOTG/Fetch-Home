@@ -1,0 +1,38 @@
+.entry-cont {
+  width: 80%;
+  @include flexColumn;
+  @include boxShadow;
+  padding-bottom: 2rem;
+  gap: 1.5rem;
+  align-items: center;
+  background-color: $primary-white;
+  cursor: pointer;
+  transition: 0.4s;
+
+  &:hover {
+    transform: translate(0, -5%);
+  }
+  .entry-information {
+    &__title {
+      margin-bottom: 1rem;
+      text-align: center;
+      font-size: 2.4rem;
+      color: $secondary-color;
+    }
+
+    &__desc {
+      @include flexColumn;
+      gap: 0.5rem;
+      p {
+        font-size: 1.2rem;
+        color: $primary-par-color;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.entry-img {
+  width: 100%;
+  aspect-ratio: 1/1;
+}

@@ -1,0 +1,46 @@
+.pagination {
+  @include marginCenter;
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: $primary-white;
+
+  &__cont {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin: 0 auto;
+    gap: 2rem;
+
+    p {
+      color: $primary-par-color;
+      font-size: 1.4rem;
+      cursor: pointer;
+      transition: 0.4s;
+
+      &:hover {
+        color: $primary-accent;
+      }
+    }
+  }
+  ul {
+    width: 30%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      color: $primary-par-color;
+      font-size: 1.4rem;
+      cursor: pointer;
+      transition: 0.4s;
+
+      &:hover {
+        color: $primary-accent;
+      }
+    }
+  }
+
+  &__list--active {
+    text-decoration: underline !important;
+  }
+}

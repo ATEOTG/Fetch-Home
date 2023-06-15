@@ -1,15 +1,16 @@
 .login-cont {
-  @include marginCenter;
+  width: 25%;
+  margin: 0 auto;
 }
 
 .form {
   @include flexColumn;
+  @include boxShadow;
   align-items: center;
   border-radius: 1rem;
   gap: 2rem;
   margin-top: 15rem;
   padding: 4rem 2rem;
-  box-shadow: 0.3rem 2rem 3.5rem -0.5rem rgba(22, 23, 34, 0.212);
 
   &__inputs-cont {
     position: relative;
