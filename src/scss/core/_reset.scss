@@ -9,6 +9,11 @@ html {
 }
 
 body {
+  height: 100vh;
   background-color: $primary-white;
   font-family: "Outfit", sans-serif;
+}
+
+#root {
+  height: inherit;
 }
